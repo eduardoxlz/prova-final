@@ -9,8 +9,7 @@
 			"path": "gateway"
 		},
 		{
-			"name": "informaticaloja",
-			"path": "informaticaloja"
+			"path": "LojaInformatica"
 		}
 	],
 	"settings": {
