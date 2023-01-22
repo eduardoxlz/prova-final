@@ -6,12 +6,13 @@ import java.util.Optional;
 import br.com.tech4me.informaticaloja.shared.InformaticaLojaDto;
 import br.com.tech4me.informaticaloja.shared.InformaticaLojaDtoCompleto;
 
+
 public interface InformaticaLojaService {
 
-    List<InformaticaLojaDtoCompleto> obterTodasO();
+    List<InformaticaLojaDtoCompleto> obterTodas();
     Optional<InformaticaLojaDto> obterPorId(String id);
     void excluirPorId(String id);
-    InformaticaLojaDtoCompleto cadastrar(InformaticaLojaDto dto);
+    InformaticaLojaDtoCompleto cadastrarPc(InformaticaLojaDtoCompleto pc);
     Optional<InformaticaLojaDtoCompleto> atualizarPorId(String id, InformaticaLojaDtoCompleto dto);
     
 

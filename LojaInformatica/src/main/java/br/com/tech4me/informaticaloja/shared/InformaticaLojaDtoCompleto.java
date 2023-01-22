@@ -15,9 +15,9 @@ public class InformaticaLojaDtoCompleto {
     private String ModeloDogabinete;
     private List<String> ListaDepecas;
     @Size(min=3, max=3, message="Informe 21, 22, ou 27")
+    private String tamanhoDogabinete;
 
-    
-    private String tamanho;
+
     public String getId() {
         return id;
     }
@@ -37,9 +37,9 @@ public class InformaticaLojaDtoCompleto {
         ListaDepecas = listaDepecas;
     }
     public String getTamanho() {
-        return tamanho;
+        return tamanhoDogabinete;
     }
-    public void setTamanho(String tamanho) {
-        this.tamanho = tamanho;
+    public void setTamanho(String tamanhoDogabinete) {
+        this.tamanhoDogabinete = tamanhoDogabinete;
     }
 }
