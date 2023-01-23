@@ -1,4 +1,4 @@
-package br.com.techme.informaticaloja.shared;
+package br.com.tech4me.informaticaloja.shared;
 
 import java.util.List;
 
@@ -7,13 +7,15 @@ import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.Size;
 
 public class InformaticaLojaDtoCompleto {
+
+
     private String id;
     @NotEmpty(message="Modelo tem que ser informado")
     @NotBlank(message="ERROR informe os caracteres")
-    private String ModeloDogabinete;
-    private List<String> ListaDepecas;
+    private String modeloDogabinete;
+    private List<String> listaDepecas;
     @Size(min=3, max=3, message="Informe 21, 22, ou 27")
-    private String tamanhoDogabinete;
+    private String tamanho;
 
 
     public String getId() {
@@ -23,21 +25,21 @@ public class InformaticaLojaDtoCompleto {
         this.id = id;
     }
     public String getModeloDogabinete() {
-        return ModeloDogabinete;
+        return modeloDogabinete;
     }
     public void setModeloDogabinete(String modeloDogabinete) {
-        ModeloDogabinete = modeloDogabinete;
+    this.modeloDogabinete = modeloDogabinete;
     }
     public List<String> getListaDepecas() {
-        return ListaDepecas;
+        return listaDepecas;
     }
     public void setListaDepecas(List<String> listaDepecas) {
-        ListaDepecas = listaDepecas;
+       this.listaDepecas = listaDepecas;
     }
     public String getTamanho() {
-        return tamanhoDogabinete;
+        return tamanho;
     }
-    public void setTamanho(String tamanhoDogabinete) {
-        this.tamanhoDogabinete = tamanhoDogabinete;
+    public void setTamanho(String tamanho) {
+        this.tamanho = tamanho;
     }
 }

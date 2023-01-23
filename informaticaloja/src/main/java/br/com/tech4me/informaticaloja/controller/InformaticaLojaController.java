@@ -1,4 +1,4 @@
-package br.com.techme.informaticaloja.controller;
+package br.com.tech4me.informaticaloja.controller;
 
 import java.util.List;
 import java.util.Optional;
@@ -16,25 +16,24 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import br.com.techme.informaticaloja.service.InformaticaLojaService;
-import br.com.techme.informaticaloja.shared.InformaticaLojaDto;
-import br.com.techme.informaticaloja.shared.InformaticaLojaDtoCompleto;
+import br.com.tech4me.informaticaloja.service.InformaticaLojaService;
+import br.com.tech4me.informaticaloja.shared.InformaticaLojaDto;
+import br.com.tech4me.informaticaloja.shared.InformaticaLojaDtoCompleto;
 import jakarta.validation.Valid;
+
 @RestController
 @RequestMapping("/montagem")
 public class InformaticaLojaController {
-    
     @Autowired
-    private InformaticaLojaService servico;
-    
-  
+    private  InformaticaLojaService servico;
+
     @PostMapping
     public ResponseEntity<InformaticaLojaDtoCompleto> cadastrarPc(@RequestBody @Valid InformaticaLojaDtoCompleto pc){
       return new ResponseEntity<>(servico.cadastrarPc(pc), HttpStatus.CREATED); 
     }
   
     @GetMapping
-    public ResponseEntity<List<InformaticaLojaDtoCompleto>> obterPc() {
+    public ResponseEntity<List<InformaticaLojaDtoCompleto>> obterCardapio() {
       return new ResponseEntity<>(servico.obterTodas(), HttpStatus.OK);
     }
   
@@ -50,16 +49,14 @@ public class InformaticaLojaController {
   
     }
   
-    
-  
     @DeleteMapping("/{id}")
-    public ResponseEntity<Void> excluirPizza(@PathVariable String id){
+    public ResponseEntity<Void> excluirpc(@PathVariable String id){
       servico.excluirPorId(id);
       return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
   
     @PutMapping("/{id}")
-    public ResponseEntity<InformaticaLojaDtoCompleto> atualizarPizza(@PathVariable String id, @RequestBody InformaticaLojaDtoCompleto pizza){
+    public ResponseEntity<InformaticaLojaDtoCompleto> atualizarPc(@PathVariable String id, @RequestBody InformaticaLojaDtoCompleto pizza){
       Optional<InformaticaLojaDtoCompleto> retorno = servico.atualizarPorId(id, pizza); 
   
       if (retorno.isPresent()) {
@@ -78,4 +75,9 @@ public class InformaticaLojaController {
   }
   
 
+
+    
+
+
+    
 

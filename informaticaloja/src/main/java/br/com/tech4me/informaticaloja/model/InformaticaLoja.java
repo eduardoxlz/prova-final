@@ -1,16 +1,18 @@
-package br.com.techme.informaticaloja.model;
+package br.com.tech4me.informaticaloja.model;
 
 import java.util.List;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+
 @Document("pc")
 public class InformaticaLoja {
+
     @Id
     private String id;
-    private String ModeloDogabinete;
-    private List<String> ListaDepecas;
+    private String modeloDogabinete;
+    private List<String> listaDepecas;
     private String tamanhoDogabinete;
 
 
@@ -27,16 +29,21 @@ public class InformaticaLoja {
         this.id = id;
     }
     public String getModeloDogabinete() {
-        return ModeloDogabinete;
+        return modeloDogabinete;
     }
     public void setModeloDegabinete(String modeloDogabinete) {
-        ModeloDogabinete = modeloDogabinete;
+        this.modeloDogabinete = modeloDogabinete;
     }
     public List<String> getListaDepecas() {
-        return ListaDepecas;
+        return listaDepecas;
     }
     public void setListaDepecas(List<String> listaDepecas) {
-        ListaDepecas = listaDepecas;
+        this.listaDepecas = listaDepecas;
     }
+
+    
+    
+
+
 
 }

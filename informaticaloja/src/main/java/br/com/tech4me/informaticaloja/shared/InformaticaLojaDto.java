@@ -1,11 +1,12 @@
-package br.com.techme.informaticaloja.shared;
+package br.com.tech4me.informaticaloja.shared;
 
 import java.util.List;
 
 public class InformaticaLojaDto {
+
     private String id;
-    private String ModeloDogabinete;
-    private List<String> ListaDepecas;
+    private String modeloDogabinete;
+    private List<String> listaDepecas;
     private String tamanhoDogabinete;
     
     public String getId() {
@@ -15,16 +16,16 @@ public class InformaticaLojaDto {
         this.id = id;
     }
     public String getModeloDogabinete() {
-        return ModeloDogabinete;
+        return modeloDogabinete;
     }
     public void setModeloDogabinete(String modeloDogabinete) {
-        ModeloDogabinete = modeloDogabinete;
+        this.modeloDogabinete = modeloDogabinete;
     }
     public List<String> getListaDepecas() {
-        return ListaDepecas;
+        return listaDepecas;
     }
     public void setListaDepecas(List<String> listaDepecas) {
-        ListaDepecas = listaDepecas;
+        this.listaDepecas = listaDepecas;
     }
     public String getTamanhoDogabinete() {
         return tamanhoDogabinete;
