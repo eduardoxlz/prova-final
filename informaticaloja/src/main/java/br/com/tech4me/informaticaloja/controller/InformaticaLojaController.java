@@ -25,21 +25,21 @@ import jakarta.validation.Valid;
 @RequestMapping("/montagem")
 public class InformaticaLojaController {
     @Autowired
-    private  InformaticaLojaService servico;
+    private  InformaticaLojaService service;
 
     @PostMapping
     public ResponseEntity<InformaticaLojaDtoCompleto> cadastrarPc(@RequestBody @Valid InformaticaLojaDtoCompleto pc){
-      return new ResponseEntity<>(servico.cadastrarPc(pc), HttpStatus.CREATED); 
+      return new ResponseEntity<>(service.cadastrarPc(pc), HttpStatus.CREATED); 
     }
   
     @GetMapping
     public ResponseEntity<List<InformaticaLojaDtoCompleto>> obterCardapio() {
-      return new ResponseEntity<>(servico.obterTodas(), HttpStatus.OK);
+      return new ResponseEntity<>(service.obterTodas(), HttpStatus.OK);
     }
   
     @GetMapping("/{id}")
     public ResponseEntity<InformaticaLojaDto> obterPc(@PathVariable String id) {
-      Optional<InformaticaLojaDto> retorno = servico.obterPorId(id);
+      Optional<InformaticaLojaDto> retorno = service.obterPorId(id);
   
       if (retorno.isPresent()) {
         return new ResponseEntity<>(retorno.get(), HttpStatus.OK);
@@ -51,13 +51,13 @@ public class InformaticaLojaController {
   
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> excluirpc(@PathVariable String id){
-      servico.excluirPorId(id);
+      service.excluirPorId(id);
       return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
   
     @PutMapping("/{id}")
     public ResponseEntity<InformaticaLojaDtoCompleto> atualizarPc(@PathVariable String id, @RequestBody InformaticaLojaDtoCompleto pizza){
-      Optional<InformaticaLojaDtoCompleto> retorno = servico.atualizarPorId(id, pizza); 
+      Optional<InformaticaLojaDtoCompleto> retorno = service.atualizarPorId(id, pizza); 
   
       if (retorno.isPresent()) {
         return new ResponseEntity<>(retorno.get(), HttpStatus.ACCEPTED);

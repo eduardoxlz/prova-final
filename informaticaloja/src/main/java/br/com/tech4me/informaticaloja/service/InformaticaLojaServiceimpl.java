@@ -6,12 +6,13 @@ import java.util.stream.Collectors;
 
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import br.com.tech4me.informaticaloja.model.InformaticaLoja;
 import br.com.tech4me.informaticaloja.repository.InformaticaLojaRepositorio;
 import br.com.tech4me.informaticaloja.shared.InformaticaLojaDto;
 import br.com.tech4me.informaticaloja.shared.InformaticaLojaDtoCompleto;
-
+@Service
 public class InformaticaLojaServiceimpl  implements InformaticaLojaService {
     @Autowired
         private InformaticaLojaRepositorio repositorio;
