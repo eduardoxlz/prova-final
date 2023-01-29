@@ -14,14 +14,7 @@ public class InformaticaLoja {
     private String modeloDogabinete;
     private List<String> listaDepecas;
     private String tamanhoDogabinete;
-
-
-    public String getTamanhoDogabinete() {
-        return tamanhoDogabinete;
-    }
-    public void setTamanhoDogabinete(String tamanhoDogabinete) {
-        this.tamanhoDogabinete = tamanhoDogabinete;
-    }
+    
     public String getId() {
         return id;
     }
@@ -31,7 +24,7 @@ public class InformaticaLoja {
     public String getModeloDogabinete() {
         return modeloDogabinete;
     }
-    public void setModeloDegabinete(String modeloDogabinete) {
+    public void setModeloDogabinete(String modeloDogabinete) {
         this.modeloDogabinete = modeloDogabinete;
     }
     public List<String> getListaDepecas() {
@@ -40,6 +33,15 @@ public class InformaticaLoja {
     public void setListaDepecas(List<String> listaDepecas) {
         this.listaDepecas = listaDepecas;
     }
+    public String getTamanhoDogabinete() {
+        return tamanhoDogabinete;
+    }
+    public void setTamanhoDogabinete(String tamanhoDogabinete) {
+        this.tamanhoDogabinete = tamanhoDogabinete;
+    }
+
+
+ 
 
     
     

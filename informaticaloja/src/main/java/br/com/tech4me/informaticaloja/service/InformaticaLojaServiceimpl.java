@@ -22,7 +22,7 @@ public class InformaticaLojaServiceimpl  implements InformaticaLojaService {
     public List<InformaticaLojaDtoCompleto> obterTodas() {
         List<InformaticaLoja> pcs = repositorio.findAll();
 
-        return pcs.stream()
+ return pcs.stream()
         .map(p -> new ModelMapper().map(p, InformaticaLojaDtoCompleto.class))
         .collect(Collectors.toList());
 }
