@@ -56,8 +56,8 @@ public class InformaticaLojaController {
     }
   
     @PutMapping("/{id}")
-    public ResponseEntity<InformaticaLojaDtoCompleto> atualizarPc(@PathVariable String id, @RequestBody InformaticaLojaDtoCompleto pizza){
-      Optional<InformaticaLojaDtoCompleto> retorno = servico.atualizarPorId(id, pizza); 
+    public ResponseEntity<InformaticaLojaDtoCompleto> atualizarPc(@PathVariable String id, @RequestBody InformaticaLojaDtoCompleto pc){
+      Optional<InformaticaLojaDtoCompleto> retorno = servico.atualizarPorId(id, pc); 
   
       if (retorno.isPresent()) {
         return new ResponseEntity<>(retorno.get(), HttpStatus.ACCEPTED);
