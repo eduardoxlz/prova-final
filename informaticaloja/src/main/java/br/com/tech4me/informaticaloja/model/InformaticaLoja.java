@@ -11,9 +11,9 @@ public class InformaticaLoja {
 
     @Id
     private String id;
-    private String modeloDogabinete;
-    private List<String> listaDepecas;
-    private String tamanhoDogabinete;
+    private String modeloDoGabinete;
+    private List<String> listaDePecas;
+    private String tamanhoDoGabinete;
     
     public String getId() {
         return id;
@@ -21,24 +21,26 @@ public class InformaticaLoja {
     public void setId(String id) {
         this.id = id;
     }
-    public String getModeloDogabinete() {
-        return modeloDogabinete;
+    public String getModeloDoGabinete() {
+        return modeloDoGabinete;
     }
-    public void setModeloDogabinete(String modeloDogabinete) {
-        this.modeloDogabinete = modeloDogabinete;
+    public void setModeloDoGabinete(String modeloDoGabinete) {
+        this.modeloDoGabinete = modeloDoGabinete;
     }
-    public List<String> getListaDepecas() {
-        return listaDepecas;
+    public List<String> getListaDePecas() {
+        return listaDePecas;
     }
-    public void setListaDepecas(List<String> listaDepecas) {
-        this.listaDepecas = listaDepecas;
+    public void setListaDePecas(List<String> listaDePecas) {
+        this.listaDePecas = listaDePecas;
     }
-    public String getTamanhoDogabinete() {
-        return tamanhoDogabinete;
+    public String getTamanhoDoGabinete() {
+        return tamanhoDoGabinete;
     }
-    public void setTamanhoDogabinete(String tamanhoDogabinete) {
-        this.tamanhoDogabinete = tamanhoDogabinete;
+    public void setTamanhoDoGabinete(String tamanhoDoGabinete) {
+        this.tamanhoDoGabinete = tamanhoDoGabinete;
     }
+    
+   
 
 
  

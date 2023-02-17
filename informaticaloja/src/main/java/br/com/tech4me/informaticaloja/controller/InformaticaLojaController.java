@@ -33,7 +33,7 @@ public class InformaticaLojaController {
     }
   
     @GetMapping
-    public ResponseEntity<List<InformaticaLojaDtoCompleto>> obterCardapio() {
+    public ResponseEntity<List<InformaticaLojaDtoCompleto>> obterTodas() {
       return new ResponseEntity<>(servico.obterTodas(), HttpStatus.OK);
     }
   
